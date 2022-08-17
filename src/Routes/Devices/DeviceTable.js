@@ -70,6 +70,7 @@ const columnNames = [
 
 const createRows = (devices, hasLinks) => {
   return devices?.map((device) => {
+    console.log(device)
     let { DeviceName, DeviceGroups } = device;
 
     const {
@@ -160,7 +161,7 @@ const createRows = (devices, hasLinks) => {
         },
         {
           title: (
-            <DeviceStatus type={getDeviceStatus(Status, UpdateAvailable)} />
+            <DeviceStatus hasPopover={true} type={getDeviceStatus(Status, UpdateAvailable)} />
           ),
         },
       ],
